@@ -32,7 +32,7 @@ class Theatre {
                 e.printStackTrace();
             }
         }
-        decr(times);
+        decr(times);  //购买，并减票数
         notifyAll();
     }
 
@@ -60,5 +60,6 @@ class Buyer extends Thread {
     public void run() {
         t.check(1);
         t.check(2);
+        t.check(3);
     }
 }

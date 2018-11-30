@@ -15,6 +15,13 @@ public class TestThread extends Thread {
 
     @Override
     public void run() {
+        try {
+            Thread.sleep(0l);
+            wait();
+            wait(0); // ÎÞÐÝÖ¹µÈ´ý
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         while (true) {
             try {
                 if (isWriter) {
